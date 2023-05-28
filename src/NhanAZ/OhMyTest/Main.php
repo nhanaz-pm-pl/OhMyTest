@@ -15,10 +15,12 @@ use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\event\server\DataPacketReceiveEvent;
 use pocketmine\item\enchantment\EnchantmentInstance;
 use pocketmine\item\enchantment\VanillaEnchantments;
-use pocketmine\item\VanillaItems;
 use pocketmine\nbt\tag\CompoundTag;
 use pocketmine\plugin\PluginBase;
 use pocketmine\world\World;
+use libpmquery\PMQuery;
+use libpmquery\PmQueryException;
+use raklib\server\Server;
 
 class Main extends PluginBase implements Listener {
 
@@ -26,6 +28,7 @@ class Main extends PluginBase implements Listener {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->getScheduler()->scheduleRepeatingTask(new TestTask($this), 20);
 		libAZ::loadWorlds();
+		libAZ::generateTerrain();
 	}
 
 	public function onJoin(PlayerJoinEvent $event): void {
@@ -52,10 +55,11 @@ class Main extends PluginBase implements Listener {
 		$world = $player->getWorld();
 		$msg = explode(" ", $event->getMessage());
 		if ($msg[0] == "tp") {
-			$world = $this->getServer()->getWorldManager()->getWorldByName($msg[1]);
+			// $world = $this->getServer()->getWorldManager()->getWorldByName($msg[1]);
+			$world = $this->getServer()->getWorldManager()->getWorldByName("Dream Archipelago");
 			if ($world instanceof World) {
 				$player->teleport($world->getSafeSpawn());
-				$player->sendMessage("Đã dịch chuyển đến thế giới: " . $msg[1]);
+				// $player->sendMessage("Đã dịch chuyển đến thế giới: " . $msg[1]);
 			}
 		}
 		if ($msg[0] == "nbt") {
