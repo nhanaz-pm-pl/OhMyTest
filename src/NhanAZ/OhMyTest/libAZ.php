@@ -124,7 +124,7 @@ class libAZ {
 	 *
 	 * @return string
 	 */
-	function centerString($str) {
+	public static function centerString($str) {
 		$lines = explode("\n", $str);
 		$maxLen = 0;
 		foreach ($lines as $line) {
