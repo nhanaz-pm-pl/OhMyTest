@@ -65,8 +65,30 @@
 -140:0 Item Acacia Button (-10001:0)x1
 -139:0 Item Dried Kelp Block (-10131:0)x1
 -137:0 Item Coral Fan (20082:3)x1
+-137:2 Item Coral Fan (20082:11)x1
+-136:0 Item Coral Fan (20082:1)x1
+-136:1 Item Coral Fan (20082:2)x1
+-136:2 Item Coral Fan (20082:9)x1
+-136:3 Item Coral Fan (20082:10)x1
+-135:0 Item Coral Fan (20082:4)x1
+-135:1 Item Coral Fan (20082:0)x1
+-135:2 Item Coral Fan (20082:12)x1
+-135:3 Item Coral Fan (20082:8)x1
 -132:0 Item Coral Block (-10090:4)x1
+-132:1 Item Coral Block (-10090:0)x1
+-132:2 Item Coral Block (-10090:1)x1
+-132:3 Item Coral Block (-10090:2)x1
+-132:4 Item Coral Block (-10090:3)x1
+-132:8 Item Coral Block (-10090:12)x1
+-132:9 Item Coral Block (-10090:8)x1
+-132:10 Item Coral Block (-10090:9)x1
+-132:11 Item Coral Block (-10090:10)x1
+-132:12 Item Coral Block (-10090:11)x1
 -131:0 Item Coral (-10089:4)x1
+-131:1 Item Coral (-10089:0)x1
+-131:2 Item Coral (-10089:1)x1
+-131:3 Item Coral (-10089:2)x1
+-131:4 Item Coral (-10089:3)x1
 -129:0 Item Oganesson (-10205:0)x1
 -128:0 Item Tennessine (-10237:0)x1
 -127:0 Item Livermorium (-10188:0)x1
@@ -205,6 +227,7 @@
 1:6 Item Polished Andesite (-10396:0)x1
 2:0 Item Grass (-10282:0)x1
 3:0 Item Dirt (-10128:1)x1
+3:1 Item Dirt (-10128:0)x1
 4:0 Item Cobblestone (-10080:0)x1
 5:0 Item Oak Planks (-10378:0)x1
 5:1 Item Spruce Planks (-10482:0)x1
@@ -227,6 +250,10 @@
 14:0 Item Gold Ore (-10277:0)x1
 15:0 Item Iron Ore (-10306:0)x1
 16:0 Item Coal Ore (-10079:0)x1
+17:0 Item Oak Log (-10377:0)x1
+17:1 Item Spruce Log (-10481:0)x1
+17:2 Item Birch Log (-10040:0)x1
+17:3 Item Jungle Log (-10315:0)x1
 17:12 Item Oak Wood (-10386:0)x1
 17:13 Item Spruce Wood (-10490:0)x1
 17:14 Item Birch Wood (-10049:0)x1
@@ -236,6 +263,7 @@
 18:2 Item Birch Leaves (-10039:0)x1
 18:3 Item Jungle Leaves (-10314:0)x1
 19:0 Item Sponge (-10475:0)x1
+19:1 Item Sponge (-10475:1)x1
 20:0 Item Glass (-10272:0)x1
 21:0 Item Lapis Lazuli Ore (-10329:0)x1
 22:0 Item Lapis Lazuli Block (-10328:0)x1
@@ -252,6 +280,21 @@
 31:2 Item Fern (-10266:0)x1
 32:0 Item Dead Bush (-10120:0)x1
 35:0 Item Wool (-10537:14)x1
+35:1 Item Wool (-10537:10)x1
+35:2 Item Wool (-10537:9)x1
+35:3 Item Wool (-10537:6)x1
+35:4 Item Wool (-10537:15)x1
+35:5 Item Wool (-10537:8)x1
+35:6 Item Wool (-10537:11)x1
+35:7 Item Wool (-10537:4)x1
+35:8 Item Wool (-10537:7)x1
+35:9 Item Wool (-10537:3)x1
+35:10 Item Wool (-10537:12)x1
+35:11 Item Wool (-10537:1)x1
+35:12 Item Wool (-10537:2)x1
+35:13 Item Wool (-10537:5)x1
+35:14 Item Wool (-10537:13)x1
+35:15 Item Wool (-10537:0)x1
 36:0 Item ??? (-10250:0)x1
 37:0 Item Dandelion (-10100:0)x1
 38:0 Item Poppy (-10405:0)x1
@@ -279,6 +322,7 @@
 43:7 Item Nether Brick Slab (-10361:0)x1
 45:0 Item Bricks (-10062:0)x1
 46:0 Item TNT (-10522:0)x1
+46:2 Item TNT (-10522:1)x1
 47:0 Item Bookshelf (-10057:0)x1
 48:0 Item Mossy Cobblestone (-10350:0)x1
 49:0 Item Obsidian (-10387:0)x1
@@ -340,9 +384,29 @@
 98:2 Item Cracked Stone Bricks (-10093:0)x1
 98:3 Item Chiseled Stone Bricks (-10076:0)x1
 99:0 Item Brown Mushroom Block (-10065:10)x1
+99:1 Item Brown Mushroom Block (-10065:5)x1
+99:2 Item Brown Mushroom Block (-10065:3)x1
+99:3 Item Brown Mushroom Block (-10065:4)x1
+99:4 Item Brown Mushroom Block (-10065:9)x1
+99:5 Item Brown Mushroom Block (-10065:2)x1
+99:6 Item Brown Mushroom Block (-10065:1)x1
+99:7 Item Brown Mushroom Block (-10065:8)x1
+99:8 Item Brown Mushroom Block (-10065:6)x1
+99:9 Item Brown Mushroom Block (-10065:7)x1
 99:10 Item Mushroom Stem (-10358:0)x1
+99:11 Item Brown Mushroom Block (-10065:0)x1
 99:15 Item All Sided Mushroom Stem (-10017:0)x1
 100:0 Item Red Mushroom Block (-10430:10)x1
+100:1 Item Red Mushroom Block (-10430:5)x1
+100:2 Item Red Mushroom Block (-10430:3)x1
+100:3 Item Red Mushroom Block (-10430:4)x1
+100:4 Item Red Mushroom Block (-10430:9)x1
+100:5 Item Red Mushroom Block (-10430:2)x1
+100:6 Item Red Mushroom Block (-10430:1)x1
+100:7 Item Red Mushroom Block (-10430:8)x1
+100:8 Item Red Mushroom Block (-10430:6)x1
+100:9 Item Red Mushroom Block (-10430:7)x1
+100:11 Item Red Mushroom Block (-10430:0)x1
 101:0 Item Iron Bars (-10304:0)x1
 102:0 Item Glass Pane (-10273:0)x1
 103:0 Item Melon Block (-10346:0)x1
@@ -396,6 +460,8 @@
 143:0 Item Oak Button (-10372:0)x1
 144:0 Item Mob Head (-10348:3)x1
 145:0 Item Anvil (-10023:0)x1
+145:4 Item Anvil (-10023:1)x1
+145:8 Item Anvil (-10023:2)x1
 146:0 Item Trapped Chest (-10524:0)x1
 147:0 Item Weighted Pressure Plate Light (-10533:0)x1
 148:0 Item Weighted Pressure Plate Heavy (-10532:0)x1
@@ -416,9 +482,41 @@
 157:4 Item Acacia Slab (-10011:0)x1
 157:5 Item Dark Oak Slab (-10111:0)x1
 159:0 Item Stained Clay (-10491:14)x1
+159:1 Item Stained Clay (-10491:10)x1
+159:2 Item Stained Clay (-10491:9)x1
+159:3 Item Stained Clay (-10491:6)x1
+159:4 Item Stained Clay (-10491:15)x1
+159:5 Item Stained Clay (-10491:8)x1
+159:6 Item Stained Clay (-10491:11)x1
+159:7 Item Stained Clay (-10491:4)x1
+159:8 Item Stained Clay (-10491:7)x1
+159:9 Item Stained Clay (-10491:3)x1
+159:10 Item Stained Clay (-10491:12)x1
+159:11 Item Stained Clay (-10491:1)x1
+159:12 Item Stained Clay (-10491:2)x1
+159:13 Item Stained Clay (-10491:5)x1
+159:14 Item Stained Clay (-10491:13)x1
+159:15 Item Stained Clay (-10491:0)x1
 160:0 Item Stained Glass Pane (-10493:14)x1
+160:1 Item Stained Glass Pane (-10493:10)x1
+160:2 Item Stained Glass Pane (-10493:9)x1
+160:3 Item Stained Glass Pane (-10493:6)x1
+160:4 Item Stained Glass Pane (-10493:15)x1
+160:5 Item Stained Glass Pane (-10493:8)x1
+160:6 Item Stained Glass Pane (-10493:11)x1
+160:7 Item Stained Glass Pane (-10493:4)x1
+160:8 Item Stained Glass Pane (-10493:7)x1
+160:9 Item Stained Glass Pane (-10493:3)x1
+160:10 Item Stained Glass Pane (-10493:12)x1
+160:11 Item Stained Glass Pane (-10493:1)x1
+160:12 Item Stained Glass Pane (-10493:2)x1
+160:13 Item Stained Glass Pane (-10493:5)x1
+160:14 Item Stained Glass Pane (-10493:13)x1
+160:15 Item Stained Glass Pane (-10493:0)x1
 161:0 Item Acacia Leaves (-10005:0)x1
 161:1 Item Dark Oak Leaves (-10105:0)x1
+162:0 Item Acacia Log (-10006:0)x1
+162:1 Item Dark Oak Log (-10106:0)x1
 162:12 Item Acacia Wood (-10015:0)x1
 162:13 Item Dark Oak Wood (-10115:0)x1
 163:0 Item Acacia Stairs (-10012:0)x1
@@ -431,6 +529,21 @@
 169:0 Item Sea Lantern (-10456:0)x1
 170:0 Item Hay Bale (-10291:0)x1
 171:0 Item Carpet (-10068:14)x1
+171:1 Item Carpet (-10068:10)x1
+171:2 Item Carpet (-10068:9)x1
+171:3 Item Carpet (-10068:6)x1
+171:4 Item Carpet (-10068:15)x1
+171:5 Item Carpet (-10068:8)x1
+171:6 Item Carpet (-10068:11)x1
+171:7 Item Carpet (-10068:4)x1
+171:8 Item Carpet (-10068:7)x1
+171:9 Item Carpet (-10068:3)x1
+171:10 Item Carpet (-10068:12)x1
+171:11 Item Carpet (-10068:1)x1
+171:12 Item Carpet (-10068:2)x1
+171:13 Item Carpet (-10068:5)x1
+171:14 Item Carpet (-10068:13)x1
+171:15 Item Carpet (-10068:0)x1
 172:0 Item Hardened Clay (-10288:0)x1
 173:0 Item Coal Block (-10078:0)x1
 174:0 Item Packed Ice (-10391:0)x1
@@ -461,6 +574,21 @@
 187:0 Item Acacia Fence Gate (-10004:0)x1
 190:0 Item Hardened Glass Pane (-10290:0)x1
 191:0 Item Stained Hardened Glass Pane (-10495:14)x1
+191:1 Item Stained Hardened Glass Pane (-10495:10)x1
+191:2 Item Stained Hardened Glass Pane (-10495:9)x1
+191:3 Item Stained Hardened Glass Pane (-10495:6)x1
+191:4 Item Stained Hardened Glass Pane (-10495:15)x1
+191:5 Item Stained Hardened Glass Pane (-10495:8)x1
+191:6 Item Stained Hardened Glass Pane (-10495:11)x1
+191:7 Item Stained Hardened Glass Pane (-10495:4)x1
+191:8 Item Stained Hardened Glass Pane (-10495:7)x1
+191:9 Item Stained Hardened Glass Pane (-10495:3)x1
+191:10 Item Stained Hardened Glass Pane (-10495:12)x1
+191:11 Item Stained Hardened Glass Pane (-10495:1)x1
+191:12 Item Stained Hardened Glass Pane (-10495:2)x1
+191:13 Item Stained Hardened Glass Pane (-10495:5)x1
+191:14 Item Stained Hardened Glass Pane (-10495:13)x1
+191:15 Item Stained Hardened Glass Pane (-10495:0)x1
 192:0 Item Heat Block (-10071:0)x1
 193:0 Item Spruce Door (-10477:0)x1
 194:0 Item Birch Door (-10036:0)x1
@@ -487,9 +615,69 @@
 215:0 Item Red Nether Bricks (-10434:0)x1
 216:0 Item Bone Block (-10056:0)x1
 218:0 Item Dyed Shulker Box (-10132:14)x1
+218:1 Item Dyed Shulker Box (-10132:10)x1
+218:2 Item Dyed Shulker Box (-10132:9)x1
+218:3 Item Dyed Shulker Box (-10132:6)x1
+218:4 Item Dyed Shulker Box (-10132:15)x1
+218:5 Item Dyed Shulker Box (-10132:8)x1
+218:6 Item Dyed Shulker Box (-10132:11)x1
+218:7 Item Dyed Shulker Box (-10132:4)x1
+218:8 Item Dyed Shulker Box (-10132:7)x1
+218:9 Item Dyed Shulker Box (-10132:3)x1
+218:10 Item Dyed Shulker Box (-10132:12)x1
+218:11 Item Dyed Shulker Box (-10132:1)x1
+218:12 Item Dyed Shulker Box (-10132:2)x1
+218:13 Item Dyed Shulker Box (-10132:5)x1
+218:14 Item Dyed Shulker Box (-10132:13)x1
+218:15 Item Dyed Shulker Box (-10132:0)x1
 219:0 Item Glazed Terracotta (-10539:12)x1
+220:0 Item Glazed Terracotta (-10539:14)x1
+221:0 Item Glazed Terracotta (-10539:10)x1
+222:0 Item Glazed Terracotta (-10539:9)x1
+223:0 Item Glazed Terracotta (-10539:6)x1
+224:0 Item Glazed Terracotta (-10539:15)x1
+225:0 Item Glazed Terracotta (-10539:8)x1
+226:0 Item Glazed Terracotta (-10539:11)x1
+227:0 Item Glazed Terracotta (-10539:4)x1
+228:0 Item Glazed Terracotta (-10539:7)x1
+229:0 Item Glazed Terracotta (-10539:3)x1
+231:0 Item Glazed Terracotta (-10539:1)x1
+232:0 Item Glazed Terracotta (-10539:2)x1
+233:0 Item Glazed Terracotta (-10539:5)x1
+234:0 Item Glazed Terracotta (-10539:13)x1
+235:0 Item Glazed Terracotta (-10539:0)x1
 236:0 Item Concrete (-10087:14)x1
+236:1 Item Concrete (-10087:10)x1
+236:2 Item Concrete (-10087:9)x1
+236:3 Item Concrete (-10087:6)x1
+236:4 Item Concrete (-10087:15)x1
+236:5 Item Concrete (-10087:8)x1
+236:6 Item Concrete (-10087:11)x1
+236:7 Item Concrete (-10087:4)x1
+236:8 Item Concrete (-10087:7)x1
+236:9 Item Concrete (-10087:3)x1
+236:10 Item Concrete (-10087:12)x1
+236:11 Item Concrete (-10087:1)x1
+236:12 Item Concrete (-10087:2)x1
+236:13 Item Concrete (-10087:5)x1
+236:14 Item Concrete (-10087:13)x1
+236:15 Item Concrete (-10087:0)x1
 237:0 Item Concrete Powder (-10088:14)x1
+237:1 Item Concrete Powder (-10088:10)x1
+237:2 Item Concrete Powder (-10088:9)x1
+237:3 Item Concrete Powder (-10088:6)x1
+237:4 Item Concrete Powder (-10088:15)x1
+237:5 Item Concrete Powder (-10088:8)x1
+237:6 Item Concrete Powder (-10088:11)x1
+237:7 Item Concrete Powder (-10088:4)x1
+237:8 Item Concrete Powder (-10088:7)x1
+237:9 Item Concrete Powder (-10088:3)x1
+237:10 Item Concrete Powder (-10088:12)x1
+237:11 Item Concrete Powder (-10088:1)x1
+237:12 Item Concrete Powder (-10088:2)x1
+237:13 Item Concrete Powder (-10088:5)x1
+237:14 Item Concrete Powder (-10088:13)x1
+237:15 Item Concrete Powder (-10088:0)x1
 238:0 Item Compound Creator (-10086:0)x1
 238:4 Item Material Reducer (-10345:0)x1
 238:8 Item Element Constructor (-10156:0)x1
@@ -497,6 +685,21 @@
 239:0 Item Underwater Torch (-10527:0)x1
 240:0 Item Chorus Plant (-10676:0)x1
 241:0 Item Stained Glass (-10492:14)x1
+241:1 Item Stained Glass (-10492:10)x1
+241:2 Item Stained Glass (-10492:9)x1
+241:3 Item Stained Glass (-10492:6)x1
+241:4 Item Stained Glass (-10492:15)x1
+241:5 Item Stained Glass (-10492:8)x1
+241:6 Item Stained Glass (-10492:11)x1
+241:7 Item Stained Glass (-10492:4)x1
+241:8 Item Stained Glass (-10492:7)x1
+241:9 Item Stained Glass (-10492:3)x1
+241:10 Item Stained Glass (-10492:12)x1
+241:11 Item Stained Glass (-10492:1)x1
+241:12 Item Stained Glass (-10492:2)x1
+241:13 Item Stained Glass (-10492:5)x1
+241:14 Item Stained Glass (-10492:13)x1
+241:15 Item Stained Glass (-10492:0)x1
 243:0 Item Podzol (-10395:0)x1
 244:0 Item Beetroot Seeds (20009:0)x1
 245:0 Item Legacy Stonecutter (-10333:0)x1
@@ -506,6 +709,21 @@
 249:0 Item ate!upd (-10301:0)x1
 253:0 Item Hardened Glass (-10289:0)x1
 254:0 Item Stained Hardened Glass (-10494:14)x1
+254:1 Item Stained Hardened Glass (-10494:10)x1
+254:2 Item Stained Hardened Glass (-10494:9)x1
+254:3 Item Stained Hardened Glass (-10494:6)x1
+254:4 Item Stained Hardened Glass (-10494:15)x1
+254:5 Item Stained Hardened Glass (-10494:8)x1
+254:6 Item Stained Hardened Glass (-10494:11)x1
+254:7 Item Stained Hardened Glass (-10494:4)x1
+254:8 Item Stained Hardened Glass (-10494:7)x1
+254:9 Item Stained Hardened Glass (-10494:3)x1
+254:10 Item Stained Hardened Glass (-10494:12)x1
+254:11 Item Stained Hardened Glass (-10494:1)x1
+254:12 Item Stained Hardened Glass (-10494:2)x1
+254:13 Item Stained Hardened Glass (-10494:5)x1
+254:14 Item Stained Hardened Glass (-10494:13)x1
+254:15 Item Stained Hardened Glass (-10494:0)x1
 255:0 Item reserved6 (-10449:0)x1
 256:0 Item Iron Shovel (20137:0)x1
 257:0 Item Iron Pickaxe (20136:0)x1
@@ -601,10 +819,40 @@
 350:0 Item Cooked Fish (20076:0)x1
 351:0 Item Ink Sac (20127:0)x1
 351:1 Item Dye (20097:13)x1
+351:2 Item Dye (20097:5)x1
 351:4 Item Lapis Lazuli (20141:0)x1
+351:5 Item Dye (20097:12)x1
+351:6 Item Dye (20097:3)x1
+351:7 Item Dye (20097:7)x1
+351:8 Item Dye (20097:4)x1
+351:9 Item Dye (20097:11)x1
+351:10 Item Dye (20097:8)x1
+351:11 Item Dye (20097:15)x1
+351:12 Item Dye (20097:6)x1
+351:13 Item Dye (20097:9)x1
+351:14 Item Dye (20097:10)x1
 351:15 Item Bone Meal (20017:0)x1
+351:16 Item Dye (20097:0)x1
+351:17 Item Dye (20097:2)x1
+351:18 Item Dye (20097:1)x1
+351:19 Item Dye (20097:14)x1
 352:0 Item Bone (20016:0)x1
 353:0 Item Sugar (20214:0)x1
+355:0 Item Bed Block (-10031:14)x1
+355:1 Item Bed Block (-10031:10)x1
+355:2 Item Bed Block (-10031:9)x1
+355:3 Item Bed Block (-10031:6)x1
+355:4 Item Bed Block (-10031:15)x1
+355:5 Item Bed Block (-10031:8)x1
+355:6 Item Bed Block (-10031:11)x1
+355:7 Item Bed Block (-10031:4)x1
+355:8 Item Bed Block (-10031:7)x1
+355:9 Item Bed Block (-10031:3)x1
+355:10 Item Bed Block (-10031:12)x1
+355:11 Item Bed Block (-10031:1)x1
+355:12 Item Bed Block (-10031:2)x1
+355:13 Item Bed Block (-10031:5)x1
+355:15 Item Bed Block (-10031:0)x1
 357:0 Item Cookie (20081:0)x1
 359:0 Item Shears (20197:0)x1
 360:0 Item Melon (20149:0)x1
@@ -618,6 +866,47 @@
 370:0 Item Ghast Tear (20108:0)x1
 371:0 Item Gold Nugget (20113:0)x1
 373:0 Item Potion (20166:38)x1
+373:1 Item Potion (20166:20)x1
+373:2 Item Potion (20166:9)x1
+373:3 Item Potion (20166:36)x1
+373:4 Item Potion (20166:0)x1
+373:5 Item Potion (20166:21)x1
+373:6 Item Potion (20166:10)x1
+373:7 Item Potion (20166:4)x1
+373:8 Item Potion (20166:7)x1
+373:9 Item Potion (20166:5)x1
+373:10 Item Potion (20166:8)x1
+373:11 Item Potion (20166:29)x1
+373:12 Item Potion (20166:1)x1
+373:13 Item Potion (20166:6)x1
+373:14 Item Potion (20166:35)x1
+373:15 Item Potion (20166:16)x1
+373:16 Item Potion (20166:33)x1
+373:17 Item Potion (20166:24)x1
+373:18 Item Potion (20166:13)x1
+373:19 Item Potion (20166:39)x1
+373:20 Item Potion (20166:18)x1
+373:21 Item Potion (20166:3)x1
+373:22 Item Potion (20166:28)x1
+373:23 Item Potion (20166:2)x1
+373:24 Item Potion (20166:27)x1
+373:25 Item Potion (20166:22)x1
+373:26 Item Potion (20166:11)x1
+373:27 Item Potion (20166:30)x1
+373:28 Item Potion (20166:23)x1
+373:29 Item Potion (20166:12)x1
+373:30 Item Potion (20166:31)x1
+373:31 Item Potion (20166:26)x1
+373:32 Item Potion (20166:15)x1
+373:33 Item Potion (20166:32)x1
+373:34 Item Potion (20166:40)x1
+373:35 Item Potion (20166:19)x1
+373:36 Item Potion (20166:41)x1
+373:37 Item Potion (20166:37)x1
+373:38 Item Potion (20166:17)x1
+373:39 Item Potion (20166:34)x1
+373:40 Item Potion (20166:25)x1
+373:41 Item Potion (20166:14)x1
 374:0 Item Glass Bottle (20109:0)x1
 375:0 Item Spider Eye (20201:0)x1
 376:0 Item Fermented Spider Eye (20104:0)x1
@@ -635,6 +924,11 @@
 393:0 Item Baked Potato (20004:0)x1
 394:0 Item Poisonous Potato (20163:0)x1
 396:0 Item Golden Carrot (20117:0)x1
+397:1 Item Mob Head (-10348:4)x1
+397:2 Item Mob Head (-10348:5)x1
+397:3 Item Mob Head (-10348:2)x1
+397:4 Item Mob Head (-10348:0)x1
+397:5 Item Mob Head (-10348:1)x1
 399:0 Item Nether Star (20158:0)x1
 400:0 Item Pumpkin Pie (20170:0)x1
 405:0 Item Nether Brick (20156:0)x1
@@ -652,8 +946,67 @@
 433:0 Item Popped Chorus Fruit (20164:0)x1
 437:0 Item Dragon's Breath (20095:0)x1
 438:0 Item Splash Potion (20202:38)x1
+438:1 Item Splash Potion (20202:20)x1
+438:2 Item Splash Potion (20202:9)x1
+438:3 Item Splash Potion (20202:36)x1
+438:4 Item Splash Potion (20202:0)x1
+438:5 Item Splash Potion (20202:21)x1
+438:6 Item Splash Potion (20202:10)x1
+438:7 Item Splash Potion (20202:4)x1
+438:8 Item Splash Potion (20202:7)x1
+438:9 Item Splash Potion (20202:5)x1
+438:10 Item Splash Potion (20202:8)x1
+438:11 Item Splash Potion (20202:29)x1
+438:12 Item Splash Potion (20202:1)x1
+438:13 Item Splash Potion (20202:6)x1
+438:14 Item Splash Potion (20202:35)x1
+438:15 Item Splash Potion (20202:16)x1
+438:16 Item Splash Potion (20202:33)x1
+438:17 Item Splash Potion (20202:24)x1
+438:18 Item Splash Potion (20202:13)x1
+438:19 Item Splash Potion (20202:39)x1
+438:20 Item Splash Potion (20202:18)x1
+438:21 Item Splash Potion (20202:3)x1
+438:22 Item Splash Potion (20202:28)x1
+438:23 Item Splash Potion (20202:2)x1
+438:24 Item Splash Potion (20202:27)x1
+438:25 Item Splash Potion (20202:22)x1
+438:26 Item Splash Potion (20202:11)x1
+438:27 Item Splash Potion (20202:30)x1
+438:28 Item Splash Potion (20202:23)x1
+438:29 Item Splash Potion (20202:12)x1
+438:30 Item Splash Potion (20202:31)x1
+438:31 Item Splash Potion (20202:26)x1
+438:32 Item Splash Potion (20202:15)x1
+438:33 Item Splash Potion (20202:32)x1
+438:34 Item Splash Potion (20202:40)x1
+438:35 Item Splash Potion (20202:19)x1
+438:36 Item Splash Potion (20202:41)x1
+438:37 Item Splash Potion (20202:37)x1
+438:38 Item Splash Potion (20202:17)x1
+438:39 Item Splash Potion (20202:34)x1
+438:40 Item Splash Potion (20202:25)x1
+438:41 Item Splash Potion (20202:14)x1
 445:0 Item Shulker Shell (20198:0)x1
+446:1 Item Banner (20006:13)x1
+446:2 Item Banner (20006:5)x1
+446:3 Item Banner (20006:2)x1
+446:4 Item Banner (20006:1)x1
+446:5 Item Banner (20006:12)x1
+446:6 Item Banner (20006:3)x1
+446:7 Item Banner (20006:7)x1
+446:8 Item Banner (20006:4)x1
+446:9 Item Banner (20006:11)x1
+446:10 Item Banner (20006:8)x1
+446:11 Item Banner (20006:15)x1
+446:12 Item Banner (20006:6)x1
+446:13 Item Banner (20006:9)x1
+446:14 Item Banner (20006:10)x1
+446:15 Item Banner (20006:14)x1
 447:0 Item Medicine (20263:2)x1
+447:1 Item Medicine (20263:3)x1
+447:2 Item Medicine (20263:0)x1
+447:3 Item Medicine (20263:1)x1
 450:0 Item Totem of Undying (20216:0)x1
 451:0 Item Bleach (20015:0)x1
 452:0 Item Iron Nugget (20135:0)x1

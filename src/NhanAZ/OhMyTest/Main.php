@@ -30,6 +30,7 @@ class Main extends PluginBase implements Listener {
 		libAZ::loadWorlds();
 		libAZ::generateTerrain();
 		libAZ::dumpPermissions();
+		libAZ::dumpIdItem();
 	}
 
 	public function onJoin(PlayerJoinEvent $event): void {

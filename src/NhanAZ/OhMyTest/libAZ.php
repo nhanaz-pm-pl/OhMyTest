@@ -6,6 +6,10 @@ namespace NhanAZ\OhMyTest;
 
 use pocketmine\block\Block;
 use pocketmine\block\BlockTypeIds;
+use pocketmine\item\Item;
+use pocketmine\item\LegacyStringToItemParser;
+use pocketmine\item\LegacyStringToItemParserException;
+use pocketmine\item\StringToItemParser;
 use pocketmine\math\Facing;
 use pocketmine\player\ChunkSelector;
 use pocketmine\Server;
@@ -123,6 +127,29 @@ class libAZ {
 			$permissibles = $permission->getPermissibles();
 			$permissionle = json_encode($permissibles);
 			fwrite($file, "| `" . $permission->getName() . "` | " . $descriptionString . " | " . $children . " | " . $permissionle . " |" . "\n");
+		}
+		fclose($file);
+	}
+
+	public static function dumpIdItem(): void {
+		$arr = [];
+		$file = fopen(Main::getInstance()->getDataFolder() . "/ID Items.md", "w");
+		for ($id = -214; $id <= 511; $id++) {
+			for ($meta = 0; $meta <= 100; $meta++) {
+				$item = $id . ":" . $meta;
+				try {
+					$item = StringToItemParser::getInstance()->parse($item) ?? LegacyStringToItemParser::getInstance()->parse($item);
+				} catch (LegacyStringToItemParserException $e) {
+					$item = "Unknown";
+				}
+				if ($item instanceof Item) {
+					$object = $item->getStateId() . $item->getTypeId();
+					if (!in_array($object, $arr)) {
+						fwrite($file, $id . ":" . $meta . " " . $item->__toString() . "\n");
+						array_push($arr, $object);
+					}
+				}
+			}
 		}
 		fclose($file);
 	}
