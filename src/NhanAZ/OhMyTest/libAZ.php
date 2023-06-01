@@ -134,6 +134,8 @@ class libAZ {
 	public static function dumpIdItem(): void {
 		$arr = [];
 		$file = fopen(Main::getInstance()->getDataFolder() . "/ID Items.md", "w");
+		fwrite($file, "| ID:Meta | (TypeId:ComputeStateData)xCount tags:0xNamedTag |" . "\n");
+		fwrite($file, "| ------- | ----------------------------------------------- |" . "\n");
 		for ($id = -214; $id <= 511; $id++) {
 			for ($meta = 0; $meta <= 100; $meta++) {
 				$item = $id . ":" . $meta;
@@ -145,7 +147,7 @@ class libAZ {
 				if ($item instanceof Item) {
 					$object = $item->getStateId() . $item->getTypeId();
 					if (!in_array($object, $arr)) {
-						fwrite($file, $id . ":" . $meta . " " . $item->__toString() . "\n");
+						fwrite($file, "| `" . $id . ":" . $meta . "` | " . $item->__toString() . " |" . "\n");
 						array_push($arr, $object);
 					}
 				}
