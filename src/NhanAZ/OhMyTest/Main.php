@@ -41,6 +41,8 @@ class Main extends PluginBase implements Listener {
 	public function onPlace(BlockPlaceEvent $event): void {
 		$blocks = $event->getTransaction()->getBlocks();
 		foreach ($blocks as [$x, $y, $z, $block]) {
+			if (!$block instanceof Block) return;
+			// Play with block
 		}
 	}
 
