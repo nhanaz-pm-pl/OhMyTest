@@ -29,7 +29,7 @@ class Dump {
 		}
 		foreach ($messages as $key => $row) {
 			if ($key < 16) {
-				fwrite($file, $row . "\n");
+				fwrite($file, $row . "<br/>");
 			}
 		}
 		fclose($file);
