@@ -114,6 +114,7 @@ class libAZ {
 			$children = json_encode($childrens);
 			$children = str_replace(",", ",<br/>", $children);
 			$children = str_replace(["{", "}"], "", $children);
+			$children = str_replace(":", ": ", $children);
 
 			$permissibles = $permission->getPermissibles();
 			$permissionle = json_encode($permissibles);
