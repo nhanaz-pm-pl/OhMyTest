@@ -44,14 +44,12 @@ class libAZ {
 	public static function dumpGlyph(string $glyph = "E1"): void {
 		$filename = basename("glyph_$glyph", ".png");
 		$startChar = hexdec(substr($filename, strrpos($filename, "_") + 1) . "00");
-		$i = 0;
-		$messages = [];
-		do {
+		$messages = array_fill(0, self::GRID * self::GRID, "");
+		for ($i = 0; $i < self::GRID * self::GRID; $i++) {
 			$z = ($i - ($i % self::GRID)) / self::GRID;
 			$ci = (int) $startChar + $i; // char index
-			$char = mb_chr($ci);
-			$messages[$z] = array_key_exists($z, $messages) ? $messages[$z] . $char : $char;
-		} while (++$i < self::GRID ** 2);
+			$messages[$z] .= mb_chr($ci);
+		}
 		foreach ($messages as $row) {
 			echo $row;
 		}
