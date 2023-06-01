@@ -117,7 +117,7 @@ class libAZ {
 			$children = str_replace('":', " : ", $children);
 			$children = str_replace('"', "- ", $children);
 			if ($children !== "[]") {
-				$children = "<details><summary>Details</summary>\n" . $children . "\n</details>";
+				$children = "<details><summary>Details</summary> " . $children . "</details>";
 			}
 
 			$permissibles = $permission->getPermissibles();
