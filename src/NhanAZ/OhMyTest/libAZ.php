@@ -15,8 +15,6 @@ use pocketmine\lang\KnownTranslationFactory;
 
 class libAZ {
 
-	const GRID = 16; // 16 * 16 Emoji
-
 	public static function getBambooHeight(Block $block): int {
 		$originalBlock = $block;
 		$height = 0;
@@ -40,6 +38,8 @@ class libAZ {
 			}
 		}
 	}
+
+	const GRID = 16; // 16 * 16 Emoji
 
 	public static function dumpGlyph(string $glyph = "E1"): void {
 		$filename = basename("glyph_$glyph", ".png");
