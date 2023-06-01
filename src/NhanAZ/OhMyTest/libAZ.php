@@ -108,7 +108,7 @@ class libAZ {
 		$permissions = PermissionManager::getInstance()->getPermissions();
 		$file = fopen(Main::getInstance()->getDataFolder() . "/permissions.md", "w");
 		fwrite($file, "| Name | Description | Children | Permissibles |" . "\n");
-		fwrite($file, "| ---- | ----------- | -------- | ------------ |" . "\n");
+		fwrite($file, "| :--- | :---------- | :------- | :----------- |" . "\n");
 		foreach ($permissions as $permission) {
 			$lang = new Language("eng");
 			$description = $permission->getDescription();
@@ -135,7 +135,7 @@ class libAZ {
 		$arr = [];
 		$file = fopen(Main::getInstance()->getDataFolder() . "/ID Items.md", "w");
 		fwrite($file, "| ID:Meta | (TypeId:ComputeStateData)xCount tags:0xNamedTag |" . "\n");
-		fwrite($file, "| ------- | :---------------------------------------------- |" . "\n");
+		fwrite($file, "| :------ | :---------------------------------------------- |" . "\n");
 		for ($id = -214; $id <= 511; $id++) {
 			for ($meta = 0; $meta <= 100; $meta++) {
 				$item = $id . ":" . $meta;

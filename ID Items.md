@@ -1,5 +1,5 @@
 | ID:Meta | (TypeId:ComputeStateData)xCount tags:0xNamedTag |
-| ------- | :---------------------------------------------- |
+| :------ | :---------------------------------------------- |
 | `-214:0` | Item Blast Furnace (-10051:0)x1 |
 | `-210:0` | Item Cauldron (-10670:0)x1 |
 | `-208:0` | Item Lantern (-10327:0)x1 |
