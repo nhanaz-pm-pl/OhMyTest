@@ -18,6 +18,8 @@ class Dump {
 
 	public static function Glyph(string $glyph = "E1"): void {
 		$filename = basename("glyph_$glyph", ".png");
+		$file = fopen(Main::getInstance()->getDataFolder() . "/Glyph.md", "w");
+		fwrite($file, "# glyph_$glyph.png" . "\n");
 		$startChar = hexdec(substr($filename, strrpos($filename, "_") + 1) . "00");
 		$messages = array_fill(0, self::GRID * self::GRID, "");
 		for ($i = 0; $i < self::GRID * self::GRID; $i++) {
@@ -25,9 +27,12 @@ class Dump {
 			$ci = (int) $startChar + $i; // char index
 			$messages[$z] .= mb_chr($ci);
 		}
-		foreach ($messages as $row) {
-			echo $row;
+		foreach ($messages as $key => $row) {
+			if ($key < 16) {
+				fwrite($file, $row . "\n");
+			}
 		}
+		fclose($file);
 	}
 
 	public static function Permissions(): void {
