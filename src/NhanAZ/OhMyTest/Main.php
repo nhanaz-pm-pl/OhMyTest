@@ -29,8 +29,10 @@ class Main extends PluginBase implements Listener {
 		$this->getScheduler()->scheduleRepeatingTask(new TestTask($this), 20);
 		libAZ::loadWorlds();
 		libAZ::generateTerrain();
-		libAZ::dumpPermissions();
-		libAZ::dumpIdItem();
+
+		Dump::Glyph();
+		Dump::Permissions();
+		Dump::IdItem();
 	}
 
 	public function onJoin(PlayerJoinEvent $event): void {
