@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace NhanAZ\OhMyTest;
 
+use pocketmine\block\Block;
 use pocketmine\block\VanillaBlocks;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\block\BlockPlaceEvent;
@@ -38,6 +39,9 @@ class Main extends PluginBase implements Listener {
 
 
 	public function onPlace(BlockPlaceEvent $event): void {
+		$blocks = $event->getTransaction()->getBlocks();
+		foreach ($blocks as [$x, $y, $z, $block]) {
+		}
 	}
 
 	public function onInteract(PlayerInteractEvent $event): void {
