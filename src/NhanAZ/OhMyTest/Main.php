@@ -18,10 +18,13 @@ use pocketmine\item\enchantment\EnchantmentInstance;
 use pocketmine\item\enchantment\VanillaEnchantments;
 use pocketmine\nbt\tag\CompoundTag;
 use pocketmine\plugin\PluginBase;
+use pocketmine\utils\SingletonTrait;
 
 class Main extends PluginBase implements Listener {
+	use SingletonTrait;
 
 	protected function onEnable(): void {
+		self::setInstance($this);
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->getScheduler()->scheduleRepeatingTask(new TestTask($this), 20);
 		libAZ::loadWorlds();

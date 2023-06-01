@@ -12,6 +12,9 @@ use pocketmine\Server;
 use pocketmine\world\format\Chunk;
 use pocketmine\world\World;
 use pocketmine\lang\KnownTranslationFactory;
+use pocketmine\lang\Language;
+use pocketmine\lang\Translatable;
+use pocketmine\permission\PermissionManager;
 
 class libAZ {
 
@@ -95,5 +98,25 @@ class libAZ {
 			$result .= str_repeat(' ', (int)($numSpaces / 2)) . $line . str_repeat(' ', (int)($numSpaces / 2)) . "\n";
 		}
 		return $result;
+	}
+
+	public static function dumpPermissions(): void {
+		$permissions = PermissionManager::getInstance()->getPermissions();
+		$file = fopen(Main::getInstance()->getDataFolder() . "/permissions.md", "w");
+		fwrite($file, "| Name | Description | Children | Permissibles |" . "\n");
+		fwrite($file, "|:-----|:------------|:---------|:-------------|" . "\n");
+		foreach ($permissions as $permission) {
+			$lang = new Language("eng");
+			$description = $permission->getDescription();
+			$descriptionString = $description instanceof Translatable ? $lang->translate($description) : $description;
+
+			$childrens = $permission->getChildren();
+			$children = json_encode($childrens);
+
+			$permissibles = $permission->getPermissibles();
+			$permissionle = json_encode($permissibles);
+			fwrite($file, "| `" . $permission->getName() . "` | " . $descriptionString . " | " . $children . " | " . $permissionle . " |" . "\n");
+		}
+		fclose($file);
 	}
 }
