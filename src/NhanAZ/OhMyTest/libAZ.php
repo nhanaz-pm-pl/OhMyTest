@@ -104,7 +104,7 @@ class libAZ {
 		$permissions = PermissionManager::getInstance()->getPermissions();
 		$file = fopen(Main::getInstance()->getDataFolder() . "/permissions.md", "w");
 		fwrite($file, "| Name | Description | Children | Permissibles |" . "\n");
-		fwrite($file, "|:-----|:------------|:---------|:-------------|" . "\n");
+		fwrite($file, "| ---- | ----------- | -------- | ------------ |" . "\n");
 		foreach ($permissions as $permission) {
 			$lang = new Language("eng");
 			$description = $permission->getDescription();
@@ -114,9 +114,8 @@ class libAZ {
 			$children = json_encode($childrens);
 			$children = str_replace(",", "<br/>", $children);
 			$children = str_replace(["{", "}"], "", $children);
-			$children = str_replace(":", ": ", $children);
-			$children = str_replace("\":", " : ", $children);
-			$children = str_replace("\"", "- ", $children);
+			$children = str_replace('":', " : ", $children);
+			$children = str_replace('"', "- ", $children);
 
 			$permissibles = $permission->getPermissibles();
 			$permissionle = json_encode($permissibles);
