@@ -88,54 +88,13 @@ class libAZ {
 		}
 	}
 
-	public static function centerText(string $text): string {
-		// Tách các dòng văn bản thành mảng dựa trên ký tự xuống dòng \n
-		$lines = explode("\n", $text);
-
-		// Tìm chiều dài dòng dài nhất
-		$max_length = 0;
-		foreach ($lines as $line) {
-			$line_length = strlen($line);
-			if ($line_length > $max_length) {
-				$max_length = $line_length;
-			}
-		}
-
-		// Căn giữa từng dòng văn bản bằng cách thêm khoảng trắng vào đầu và cuối
-		$centered_lines = array();
-		foreach ($lines as $line) {
-			$line_length = strlen($line);
-			$padding_length = ($max_length - $line_length) / 2;
-			$padding = str_repeat(" ", (int) $padding_length);
-			$centered_line = $padding . $line . $padding;
-			$centered_lines[] = $centered_line;
-		}
-
-		// Gộp lại các dòng văn bản thành một chuỗi
-		$centered_text = implode("\n", $centered_lines);
-
-		return $centered_text;
-	}
-
-	/**
-	 * Hàm căn giữa chuỗi
-	 *
-	 * @param string $str Chuỗi cần căn giữa
-	 *
-	 * @return string
-	 */
 	public static function centerString($str) {
 		$lines = explode("\n", $str);
-		$maxLen = 0;
-		foreach ($lines as $line) {
-			$maxLen = max($maxLen, strlen($line));
-		}
+		$maxLen = max(array_map('strlen', $lines));
 		$result = '';
 		foreach ($lines as $line) {
 			$numSpaces = $maxLen - strlen($line);
-			$leftSpaces = floor($numSpaces / 2);
-			$rightSpaces = ceil($numSpaces / 2);
-			$result .= str_repeat(' ', (int)$leftSpaces) . $line . str_repeat(' ', (int)$rightSpaces) . "\n";
+			$result .= str_repeat(' ', (int)($numSpaces / 2)) . $line . str_repeat(' ', (int)($numSpaces / 2)) . "\n";
 		}
 		return $result;
 	}
