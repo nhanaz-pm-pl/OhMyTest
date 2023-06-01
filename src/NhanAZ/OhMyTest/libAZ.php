@@ -18,12 +18,12 @@ class libAZ {
 	public static function getBambooHeight(Block $block): int {
 		$originalBlock = $block;
 		$height = 0;
-		while ($block->getTypeId() === BlockTypeIds::BAMBOO) {
+		for (; $block->getTypeId() === BlockTypeIds::BAMBOO;) {
 			$height++;
 			$block = $block->getSide(Facing::UP);
 		}
 		$block = $originalBlock;
-		while ($block->getTypeId() === BlockTypeIds::BAMBOO) {
+		for (; $block->getTypeId() === BlockTypeIds::BAMBOO;) {
 			$height++;
 			$block = $block->getSide(Facing::DOWN);
 		}
