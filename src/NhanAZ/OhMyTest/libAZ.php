@@ -45,10 +45,11 @@ class libAZ {
 			try {
 				$world->getSafeSpawn();
 			} catch (\Exception) {
+				Main::getInstance()->getServer()->getLogger()->notice(Main::getInstance()->getServer()->getLanguage()->translate(KnownTranslationFactory::pocketmine_level_backgroundGeneration($world->getFolderName())));
 				$spawnLocation = $world->getSpawnLocation();
 				$centerX = $spawnLocation->getFloorX() >> Chunk::COORD_BIT_SIZE;
 				$centerZ = $spawnLocation->getFloorZ() >> Chunk::COORD_BIT_SIZE;
-				$selected = iterator_to_array((new ChunkSelector())->selectChunks(8, $centerX, $centerZ));
+				$selected = iterator_to_array((new ChunkSelector())->selectChunks(8, $centerX, $centerZ), preserve_keys: false);
 				$done = 0;
 				$total = count($selected);
 				foreach ($selected as $index) {
@@ -79,5 +80,12 @@ class libAZ {
 			$result .= str_repeat(' ', (int)($numSpaces / 2)) . $line . str_repeat(' ', (int)($numSpaces / 2)) . "\n";
 		}
 		return $result;
+	}
+
+	public static function isOnline(string $playerName) : bool {
+		if (Main::getInstance()->getServer()->getPlayerExact($playerName) !== null) {
+			return true;
+		}
+		return false;
 	}
 }
