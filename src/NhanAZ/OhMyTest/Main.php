@@ -19,6 +19,7 @@ use pocketmine\item\enchantment\VanillaEnchantments;
 use pocketmine\nbt\tag\CompoundTag;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\SingletonTrait;
+use pocketmine\world\World;
 
 class Main extends PluginBase implements Listener {
 	use SingletonTrait;
@@ -64,8 +65,13 @@ class Main extends PluginBase implements Listener {
 		$msg = explode(" ", $event->getMessage());
 		$commands = [
 			"tp" => function ($player, $world) {
+				$world = $this->getServer()->getWorldManager()->getWorldByName($world);
+				if (!$world instanceof World) {
+					$player->sendMessage($world . "is NULL!");
+					return;
+				}
 				$player->teleport($world->getSafeSpawn());
-				$player->sendMessage("Đã dịch chuyển đến thế giới: " . $world->getName());
+				$player->sendMessage("Đã dịch chuyển đến thế giới: " . $world->getDisplayName());
 			},
 			"nbt" => function ($player) {
 				var_dump($player->getInventory()->getItemInHand()->getCustomBlockData()->getString("blockdata"));
