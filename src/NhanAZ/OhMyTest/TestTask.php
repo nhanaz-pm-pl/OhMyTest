@@ -16,9 +16,7 @@ class TestTask extends Task {
 	public function onRun(): void {
 		$server = Server::getInstance();
 		$tick = $this->getHandler()->getNextRun();
-		$server->broadcastMessage("[OhMyTest] I've run on tick " . $tick);
 		if ($tick > 120) {
-			$server->broadcastMessage("[OhMyTest] Task canceled");
 			$this->getHandler()->cancel();
 		}
 	}
