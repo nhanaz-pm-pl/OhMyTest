@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace NhanAZ\OhMyTest;
 
-class Text {
+class TextAZ {
 
 	public static function center($str) {
 		$lines = explode("\n", $str);

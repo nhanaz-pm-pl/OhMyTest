@@ -28,12 +28,12 @@ class Main extends PluginBase implements Listener {
 		self::setInstance($this);
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->getScheduler()->scheduleRepeatingTask(new TestTask($this), 20);
-		libAZ::loadWorlds();
-		libAZ::generateTerrain();
+		WorldAZ::loadWorlds();
+		WorldAZ::generateTerrain();
 
-		Dump::Glyph();
-		Dump::Permissions();
-		Dump::IdItem();
+		DumpAZ::Glyph();
+		DumpAZ::Permissions();
+		DumpAZ::IdItem();
 	}
 
 	public function onJoin(PlayerJoinEvent $event): void {

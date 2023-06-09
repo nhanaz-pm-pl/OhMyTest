@@ -12,7 +12,7 @@ use pocketmine\lang\Language;
 use pocketmine\lang\Translatable;
 use pocketmine\permission\PermissionManager;
 
-class Dump {
+class DumpAZ {
 
 	const GRID = 16; // 16 * 16 Emoji
 
