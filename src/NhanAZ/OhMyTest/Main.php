@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace NhanAZ\OhMyTest;
 
+use NhanAZ\libBedrock\tools\GenStringToIdMeta;
 use pocketmine\block\Block;
 use pocketmine\block\VanillaBlocks;
 use pocketmine\event\block\BlockBreakEvent;
@@ -33,7 +34,7 @@ class Main extends PluginBase implements Listener {
 
 		DumpAZ::Glyph();
 		DumpAZ::Permissions();
-		DumpAZ::IdItem();
+		# DumpAZ::IdItem();
 	}
 
 	public function onJoin(PlayerJoinEvent $event): void {

@@ -67,8 +67,9 @@ class DumpAZ {
 		$file = fopen(Main::getInstance()->getDataFolder() . "/ID Items.md", "w");
 		fwrite($file, "| ID:Meta | (TypeId:ComputeStateData)xCount tags:0xNamedTag |" . "\n");
 		fwrite($file, "| :------ | :---------------------------------------------- |" . "\n");
-		for ($id = -214; $id <= 511; $id++) {
-			for ($meta = 0; $meta <= 100; $meta++) {
+		for ($id = -500; $id <= 1000; $id++) {
+			for ($meta = 0; $meta <= 200; $meta++) {
+				echo "DumpAZ::IdItem running #$id/1000 $meta/200\n";
 				$item = $id . ":" . $meta;
 				try {
 					$item = StringToItemParser::getInstance()->parse($item) ?? LegacyStringToItemParser::getInstance()->parse($item);
