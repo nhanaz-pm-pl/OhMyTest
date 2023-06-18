@@ -18,7 +18,12 @@ use pocketmine\event\server\DataPacketReceiveEvent;
 use pocketmine\item\enchantment\EnchantmentInstance;
 use pocketmine\item\enchantment\VanillaEnchantments;
 use pocketmine\nbt\tag\CompoundTag;
+use pocketmine\network\mcpe\NetworkBroadcastUtils;
+use pocketmine\network\mcpe\protocol\LevelEventPacket;
+use pocketmine\network\mcpe\protocol\types\LevelEvent;
+use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
+use pocketmine\Server;
 use pocketmine\utils\SingletonTrait;
 use pocketmine\world\World;
 
@@ -103,6 +108,20 @@ class Main extends PluginBase implements Listener {
 				}
 				$player->sendMessage(implode(", ", $out));
 			},
+			"fly" => function(Player $player) {
+				$player->setFlying(true);
+				$player->setAllowFlight(true);
+			},
+			"pause" => function(Player $player) {
+				$pk = LevelEventPacket::create(1, LevelEvent::PAUSE_GAME, $player->getPosition());
+				NetworkBroadcastUtils::broadcastPackets($this->getServer()->getOnlinePlayers(), [$pk]);
+				$player->sendMessage("Paused!");
+			},
+			"resume" => function(Player $player) {
+				$pk = LevelEventPacket::create(0, LevelEvent::PAUSE_GAME, $player->getPosition());
+				NetworkBroadcastUtils::broadcastPackets($this->getServer()->getOnlinePlayers(), [$pk]);
+				$player->sendMessage("Resumed!");
+			}
 		];
 		if (isset($commands[$msg[0]])) {
 			$commands[$msg[0]]($player, ...array_slice($msg, 1));
