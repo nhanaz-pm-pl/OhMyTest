@@ -16,7 +16,7 @@ class DumpAZ {
 
 	const GRID = 16; // 16 * 16 Emoji
 
-	public static function Glyph(string $glyph = "E1"): void {
+	public static function Glyph(string $glyph = "E0"): void {
 		$filename = basename("glyph_$glyph", ".png");
 		$file = fopen(Main::getInstance()->getDataFolder() . "/Glyph.md", "w");
 		fwrite($file, "# glyph_$glyph.png" . "\n");
@@ -25,7 +25,7 @@ class DumpAZ {
 		for ($i = 0; $i < self::GRID * self::GRID; $i++) {
 			$z = ($i - ($i % self::GRID)) / self::GRID;
 			$ci = (int) $startChar + $i; // char index
-			$messages[$z] .= mb_chr($ci);
+			$messages[$z] .= mb_chr($ci) . " ";
 		}
 		foreach ($messages as $key => $row) {
 			if ($key < 16) {
