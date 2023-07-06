@@ -48,8 +48,14 @@ class Main extends PluginBase implements Listener {
 	public function onBreak(BlockBreakEvent $event): void {
 	}
 
-	public function onMove(PlayerMoveEvent $event) {
+	public function onMove(PlayerMoveEvent $event): void {
+		$player = $event->getPlayer();
+		$pos = $player->getPosition();
+		if ($player->getName() == "NhanAZ") {
+			$pos->getWorld()->setBlock($pos->add(0, -1, 0)->asVector3(), VanillaBlocks::CHERRY_LEAVES()->setNoDecay(true));
+		}
 	}
+
 
 
 	public function onPlace(BlockPlaceEvent $event): void {
@@ -108,16 +114,16 @@ class Main extends PluginBase implements Listener {
 				}
 				$player->sendMessage(implode(", ", $out));
 			},
-			"fly" => function(Player $player) {
+			"fly" => function (Player $player) {
 				$player->setFlying(true);
 				$player->setAllowFlight(true);
 			},
-			"pause" => function(Player $player) {
+			"pause" => function (Player $player) {
 				$pk = LevelEventPacket::create(1, LevelEvent::PAUSE_GAME, $player->getPosition());
 				NetworkBroadcastUtils::broadcastPackets($this->getServer()->getOnlinePlayers(), [$pk]);
 				$player->sendMessage("Paused!");
 			},
-			"resume" => function(Player $player) {
+			"resume" => function (Player $player) {
 				$pk = LevelEventPacket::create(0, LevelEvent::PAUSE_GAME, $player->getPosition());
 				NetworkBroadcastUtils::broadcastPackets($this->getServer()->getOnlinePlayers(), [$pk]);
 				$player->sendMessage("Resumed!");
