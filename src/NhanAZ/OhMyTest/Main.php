@@ -6,6 +6,7 @@ namespace NhanAZ\OhMyTest;
 
 use NhanAZ\libBedrock\tools\GenStringToIdMeta;
 use pocketmine\block\Block;
+use pocketmine\block\BlockTypeIds;
 use pocketmine\block\VanillaBlocks;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\block\BlockPlaceEvent;
@@ -17,6 +18,7 @@ use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\event\server\DataPacketReceiveEvent;
 use pocketmine\item\enchantment\EnchantmentInstance;
 use pocketmine\item\enchantment\VanillaEnchantments;
+use pocketmine\math\Facing;
 use pocketmine\nbt\tag\CompoundTag;
 use pocketmine\network\mcpe\NetworkBroadcastUtils;
 use pocketmine\network\mcpe\protocol\LevelEventPacket;
@@ -52,7 +54,10 @@ class Main extends PluginBase implements Listener {
 		$player = $event->getPlayer();
 		$pos = $player->getPosition();
 		if ($player->getName() == "NhanAZ") {
-			$pos->getWorld()->setBlock($pos->add(0, -1, 0)->asVector3(), VanillaBlocks::CHERRY_LEAVES()->setNoDecay(true));
+			$down = $pos->getWorld()->getBlock($pos->getSide(Facing::DOWN));
+			if ($down->getTypeId() === BlockTypeIds::AIR) {
+				$pos->getWorld()->setBlock($pos->add(0, -1, 0)->asVector3(), VanillaBlocks::CHERRY_LEAVES());
+			}
 		}
 	}
 

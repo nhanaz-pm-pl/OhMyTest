@@ -21,12 +21,8 @@ class TestTask extends Task {
 		$players = $server->getOnlinePlayers();
 		$nhanaz = $server->getPlayerExact("NhanAZ");
 		if ($nhanaz !== null) {
-			for ($i = 0; $i <= 30; $i++) {
-				$x = SpawnParticleEffectPacket::create(DimensionIds::OVERWORLD, -1, $nhanaz->getPosition()->add(rand(05, 5), rand(-5, 5), rand(-5, 5)), "minecraft:cherry_leaves_particle", null);
-				$y = SpawnParticleEffectPacket::create(DimensionIds::OVERWORLD, -1, $nhanaz->getPosition()->add(rand(-5, 5), rand(-5, 5), rand(-5, 5)), "minecraft:cherry_leaves_particle", null);
-				$z = SpawnParticleEffectPacket::create(DimensionIds::OVERWORLD, -1, $nhanaz->getPosition()->add(rand(-5, 5), rand(-5, 5), rand(-5, 5)), "cminecraft:herry_leaves_particle", null);
-				NetworkBroadcastUtils::broadcastPackets($players, [$x, $y, $z]);
-			}
+			$packet = SpawnParticleEffectPacket::create(DimensionIds::OVERWORLD, -1, $nhanaz->getPosition()->add(0.5, 0, 0.5), "minecraft:crop_growth_area_emitter", null);
+			NetworkBroadcastUtils::broadcastPackets($players, [$packet]);
 		}
 	}
 }
