@@ -9,6 +9,7 @@ use pocketmine\block\Block;
 use pocketmine\block\VanillaBlocks;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\block\BlockPlaceEvent;
+use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerChatEvent;
 use pocketmine\event\player\PlayerInteractEvent;
@@ -40,6 +41,21 @@ class Main extends PluginBase implements Listener {
 		DumpAZ::Glyph();
 		DumpAZ::Permissions();
 		# DumpAZ::IdItem();
+	}
+
+	/**
+	 * @handleCancelled TRUE
+	 */
+	public function onDamage(EntityDamageByEntityEvent $event): void {
+		$entity = $event->getEntity();
+		$damager = $event->getDamager();
+		if (
+			$damager instanceof Player &&
+			$entity instanceof Player &&
+			$event->isCancelled()
+		) {
+			$damager->sendMessage("Mở Form");
+		}
 	}
 
 	public function onJoin(PlayerJoinEvent $event): void {
@@ -108,16 +124,16 @@ class Main extends PluginBase implements Listener {
 				}
 				$player->sendMessage(implode(", ", $out));
 			},
-			"fly" => function(Player $player) {
+			"fly" => function (Player $player) {
 				$player->setFlying(true);
 				$player->setAllowFlight(true);
 			},
-			"pause" => function(Player $player) {
+			"pause" => function (Player $player) {
 				$pk = LevelEventPacket::create(1, LevelEvent::PAUSE_GAME, $player->getPosition());
 				NetworkBroadcastUtils::broadcastPackets($this->getServer()->getOnlinePlayers(), [$pk]);
 				$player->sendMessage("Paused!");
 			},
-			"resume" => function(Player $player) {
+			"resume" => function (Player $player) {
 				$pk = LevelEventPacket::create(0, LevelEvent::PAUSE_GAME, $player->getPosition());
 				NetworkBroadcastUtils::broadcastPackets($this->getServer()->getOnlinePlayers(), [$pk]);
 				$player->sendMessage("Resumed!");
