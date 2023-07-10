@@ -460,7 +460,7 @@
 | `141:0` | Item Carrot (20024:0)x1 |
 | `142:0` | Item Potato (20165:0)x1 |
 | `143:0` | Item Oak Button (-10372:0)x1 |
-| `144:0` | Item Mob Head (-10348:3)x1 |
+| `144:0` | Item Mob Head (-10348:4)x1 |
 | `145:0` | Item Anvil (-10023:0)x1 |
 | `145:4` | Item Anvil (-10023:1)x1 |
 | `145:8` | Item Anvil (-10023:2)x1 |
@@ -926,11 +926,12 @@
 | `393:0` | Item Baked Potato (20004:0)x1 |
 | `394:0` | Item Poisonous Potato (20163:0)x1 |
 | `396:0` | Item Golden Carrot (20117:0)x1 |
-| `397:1` | Item Mob Head (-10348:4)x1 |
-| `397:2` | Item Mob Head (-10348:5)x1 |
-| `397:3` | Item Mob Head (-10348:2)x1 |
+| `397:1` | Item Mob Head (-10348:5)x1 |
+| `397:2` | Item Mob Head (-10348:6)x1 |
+| `397:3` | Item Mob Head (-10348:3)x1 |
 | `397:4` | Item Mob Head (-10348:0)x1 |
 | `397:5` | Item Mob Head (-10348:1)x1 |
+| `397:6` | Item Mob Head (-10348:2)x1 |
 | `399:0` | Item Nether Star (20158:0)x1 |
 | `400:0` | Item Pumpkin Pie (20170:0)x1 |
 | `405:0` | Item Nether Brick (20156:0)x1 |
